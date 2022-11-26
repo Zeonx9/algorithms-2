@@ -20,7 +20,7 @@ template<class T>
 void insert(RBTree<T> *root, const T &k);
 
 template<class T>
-RBTree<T> *remove(RBTree<T> *root, const T &k);
+void remove(RBTree<T> *root, const T &k);
 
 template<class T>
 void print(RBTree<T> *root, int level);

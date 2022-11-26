@@ -9,4 +9,4 @@ add_executable(2pointers 2pointers/main.cpp)
 
 add_executable(linked_lists_stacks linked_lists_stacks/classes.h linked_lists_stacks/main.cpp)
 
-add_executable(trees trees/src/AVLTree.cpp trees/include/AVLTree.h trees/include/BSTree.hpp trees/src/BSTree.cpp trees/main.cpp trees/src/RBTree.cpp trees/include/RBTree.h)
+add_executable(trees trees/src/AVLTree.cpp trees/include/AVLTree.h trees/include/BSTree.hpp trees/src/BSTree.cpp trees/main.cpp trees/src/RBTree.cpp trees/include/RBTree.h trees/src/Heap.cpp trees/include/Heap.h)
