@@ -6,6 +6,7 @@
 #define ALGORITHMS2_CLASSES_H
 
 #include <iostream>
+#include <vector>
 
 struct Node2 {
    int val;
@@ -30,6 +31,13 @@ void print(Node2 *n) {
     }
 }
 
+Node2 *makeFromVector2(std::vector<int> &a) {
+    Node2 *head = nullptr;
+    for (auto e : a)
+        head = add(head, e);
+    return head;
+}
+
 struct Node1 {
     int val;
     Node1 *next;
@@ -43,6 +51,20 @@ Node1 * add(Node1 *n, int v) {
         n->next = add(n->next, v);
         return n;
     }
+}
+
+void print(Node1 *n) {
+    if (n) {
+        std::cout << n->val << " ";
+        print(n->next);
+    }
+}
+
+Node1 *makeFromVector1(std::vector<int> &a) {
+    Node1 *head = nullptr;
+    for (auto e : a)
+        head = add(head, e);
+    return head;
 }
 
 
