@@ -50,7 +50,19 @@ bool isSymmetric1(Node1 *head) {
 }
 
 void deleteRepeats(Node1 *head) {
-
+    auto cur = head;
+    while (cur->next) {
+        auto t = cur;
+        while(t->next) {
+            if (t->next->val == cur->val) {
+                auto cpy = t->next;
+                t->next = t->next->next;
+                delete cpy;
+            } else
+                t = t->next;
+        }
+        cur = cur->next;
+    }
 }
 
 int findLenOfCycledSomewhereList(Node1 *head) {
@@ -61,12 +73,17 @@ array findClosestDayForEveryDay(array &a);
 
 int findLenOfCycledTrainWithLamps(Node2 *head);
 
-bool areStringsWithBackSpacesEqual();
+bool areStringsWithBackSpacesEqual(const std::string &s1, const std::string &s2) {
+    return false;
+}
 
 
 int main() {
-    std::vector<int> v{6,5,4,5,6};
+    std::vector<int> v{1, 2, 3, 2, 2, 3, 4};
     auto head = makeFromVector1(v);
     print(head);
-    std::cout << "\n" << (isSymmetric1(head) ? "yes" : "no") << "\n";
+    std::cout << "\n";
+    deleteRepeats(head);
+    print(head);
+//    std::cout << "\n" << (isSymmetric1(head) ? "yes" : "no") << "\n";
 }

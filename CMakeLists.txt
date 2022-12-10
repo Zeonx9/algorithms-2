@@ -9,6 +9,8 @@ add_executable(2_missed_number 2_missed_number/main.cpp)
 
 add_executable(3_two_pointers 3_two_pointers/main.cpp)
 
-add_executable(4_linked_lists_stacks 4_linked_lists_stacks/classes.h 4_linked_lists_stacks/main.cpp)
+add_executable(4_5_linked_lists_stacks 4_5_linked_lists_stacks/classes.h 4_5_linked_lists_stacks/main.cpp)
 
 add_executable(6_trees 6_trees/src/AVLTree.cpp 6_trees/include/AVLTree.h 6_trees/include/BSTree.hpp 6_trees/src/BSTree.cpp 6_trees/main.cpp 6_trees/src/RBTree.cpp 6_trees/include/RBTree.h 6_trees/src/Heap.cpp 6_trees/include/Heap.h)
+
+add_executable(7_range_queries 7_range_queries/main.cpp 7_range_queries/SegTree.h)

@@ -21,8 +21,27 @@ int missedNumberBool(array &a) {
     return 0;
 }
 
+int missedNumberReplace(array &a) {
+    for (int i = 0; i < a.size(); ++i) {
+        if (a[i] == i)
+            continue;
+        auto m = a[i];
+        while (m < a.size() and a[m] != m) {
+            auto k = a[m];
+            a[m] = m;
+            m = k;
+        }
+    }
+    for (int i = 0; i < a.size(); ++i) {
+        if (a[i] != i)
+            return i;
+    }
+    return (int) a.size();
+}
+
 int main() {
-    array a{4, 1, 0, 3};
+    array a{3, 2, 1, 0};
     std::cout << missedNumberSum(a) << "\n";
     std::cout << missedNumberBool(a) << "\n";
+    std::cout << missedNumberReplace(a) << "\n";
 }

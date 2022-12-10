@@ -67,5 +67,15 @@ Node1 *makeFromVector1(std::vector<int> &a) {
     return head;
 }
 
+Node1 *addToStack(Node1 *head, int elem) {
+    return new Node1(elem, head);
+}
+
+Node1 *pop(Node1 *head) {
+    auto cur = head;
+    head = head->next;
+    delete cur;
+    return head;
+}
 
 #endif //ALGORITHMS2_CLASSES_H

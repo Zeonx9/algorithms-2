@@ -134,8 +134,8 @@ str getMaxSubstrNoRepeat(str &s) {
 }
 
 int main() {
-    array a = input(), b = getSquared(a);
-    print(a);
-    print(b);
+    array a = input(), b = input();
+    auto c = getMindiff(a, b);
+    std::cout << c << "\n";
     return 0;
 }
