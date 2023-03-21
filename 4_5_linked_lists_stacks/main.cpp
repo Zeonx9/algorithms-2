@@ -77,13 +77,25 @@ bool areStringsWithBackSpacesEqual(const std::string &s1, const std::string &s2)
     return false;
 }
 
+Node1 *reverse(Node1 *head) {
+    Node1 *cur = head;
+    Node1 *prv = nullptr;
+    while (cur) {
+        Node1 *nxt = cur->next;
+        cur->next = prv;
+        prv = cur;
+        cur = nxt;
+    }
+    return prv;
+}
+
 
 int main() {
-    std::vector<int> v{1, 2, 3, 2, 2, 3, 4};
+    std::vector<int> v{1, 2, 3, 4, 5, 6};
     auto head = makeFromVector1(v);
     print(head);
     std::cout << "\n";
-    deleteRepeats(head);
-    print(head);
+    auto rev_head = reverse(head);
+    print(rev_head);
 //    std::cout << "\n" << (isSymmetric1(head) ? "yes" : "no") << "\n";
 }
