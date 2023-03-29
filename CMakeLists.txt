@@ -21,4 +21,4 @@ add_executable(9_rq 9_rq/prefix_sum.cpp)
 
 add_executable(10_graphs 10_graphs/main.cpp 10_graphs/graph.h 10_graphs/graph_algs.h)
 
-add_executable(tinyok_contests tinyok_contests/main.cpp)
+add_executable(tinyok_contests_ren tinyok_contests_ren/main.cpp)
